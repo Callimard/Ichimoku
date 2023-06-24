@@ -11,6 +11,7 @@
   <modules>
     <module>services</module>
     <module>models</module>
+    <module>utils</module>
   </modules>
 
   <properties>
@@ -19,4 +20,120 @@
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Internal -->
+      <dependency>
+        <groupId>org.rakoto.bybit.ichimoku</groupId>
+        <artifactId>services</artifactId>
+        <version>dev-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.rakoto.bybit.ichimoku</groupId>
+        <artifactId>models</artifactId>
+        <version>dev-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.rakoto.bybit.ichimoku</groupId>
+        <artifactId>utils</artifactId>
+        <version>dev-SNAPSHOT</version>
+      </dependency>
+
+      <!-- Jakarta -->
+      <dependency>
+        <groupId>jakarta.validation</groupId>
+        <artifactId>jakarta.validation-api</artifactId>
+        <version>3.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.inject</groupId>
+        <artifactId>jakarta.inject-api</artifactId>
+        <version>2.0.1</version>
+      </dependency>
+
+      <!-- Google Guava -->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>31.1-jre</version>
+      </dependency>
+
+      <!-- Lombok -->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.28</version>
+      </dependency>
+
+      <!-- Jackson -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.15.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jsr310</artifactId>
+        <version>2.15.2</version>
+      </dependency>
+
+      <!-- Junit 5 -->
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.9.2</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-params</artifactId>
+        <version>5.9.2</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.9.2</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.9.2</version>
+        <scope>test</scope>
+      </dependency>
+
+      <!-- AssertJ -->
+      <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>3.24.2</version>
+        <scope>test</scope>
+      </dependency>
+
+      <!-- Slf4j -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.36</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.18.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.18.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>2.18.0</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
